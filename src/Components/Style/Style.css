@@ -1,0 +1,376 @@
+body{
+  margin: 6px;
+  padding: 6px;
+}
+.FlexRow{
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+
+}
+.FlexRow1{
+  justify-content: space-between;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+
+}
+.flexCol{
+  display: flex;
+  flex-direction: column;
+}
+.virticalText{
+    transform: rotate(-90deg);
+}
+.titleHead{
+    font-size: 30px;
+    font-weight: 600;
+}
+.headerTitle{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.headLinkFlex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.headLinkText{
+    text-decoration: none;
+    color: black;
+}
+.headLinkText:hover{
+    color: gray;
+}
+.header {
+  margin-bottom: 25px;
+  border-bottom: 1px solid rgb(0, 0, 0,.1);
+}
+.card1ImgBox{
+    border-radius: 3px;
+    width: 250px;
+    height: 180px;
+}
+.cardImgBox {
+  margin-right: 5px;
+  border-radius: 25px;
+  width: 429px;
+  height: 220px;
+  margin-left: 5px;
+}
+
+
+.cardContain{
+    width: 200px;
+}
+.cardTitle{
+    width: 250px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #404040;
+
+}
+.cardDec{
+    font-size: 14px;
+    color: #908D8D;
+}
+.cardDate{
+    color: #404040;
+    font-size: 16px;
+
+}
+
+.FeatureArtBox {
+    display: flex;
+    flex-direction: row;
+    /* background-color: #2196F3; */
+    width: 100%;
+  }
+  
+ 
+  
+  .FeatureBox1 {
+  color: burlywood;
+    font-size: 25px;
+    position: relative;
+    height: 380px;
+    width:806px;
+  }
+  .FeatureImgBox1{
+      position:absolute ;
+      width:806px;
+      height: 377px;
+      left:0;
+      top:3px;
+      border-radius: 20px;
+
+  }
+  .box1Txt{
+    
+      position:absolute ;
+      top:50px;
+      left:100px
+}
+.box1TxtDate{
+
+      position:absolute ;
+      bottom: 9px;
+      left:14px
+}
+.FeatureBox2 {
+  color: burlywood;
+    font-size: 25px;
+  position: relative;
+      height: 188px ;
+      width: 500px ;
+      margin-left: 14px;
+      margin-top: 3px;
+      
+     
+}
+  .FeatureImgBox2 {
+    position: absolute;
+        height: 186px ;
+        width: 500px ;
+        top:0px;
+        left:0px;
+        border-radius: 20px;
+       
+  }
+  .box2Txt{
+    position:absolute ;
+    top:8px;
+    left:13px
+}
+.box2TxtDate{
+    position:absolute ;
+    bottom:6px;
+    left:12px
+}
+  
+
+  .homeLatestTxt{
+      margin:30px 0px;
+        display: flex;
+        flex-direction: row;
+        font-size: 25px;
+        font-weight: 600;
+      
+  }
+  .articleHtext{
+    margin-right: 5px;
+      width: 67px;
+     border-bottom: 3px pink solid;
+
+  }
+  .TxtBorder{
+      margin-right: 5px;
+      width: 40px;
+     border-bottom: 3px pink solid;
+  }
+  .ArtFlxCol{
+    border-top:  1px solid rgb(0, 0, 0,.1) ;
+    width: 900px;
+    padding: 30px 5px 0px 0px;
+  }
+  .artVerticleImg{
+      
+      width: 700px;
+      height: 350px;
+  }
+  .Advertistement{
+      margin-top: 30px;
+      width: 300px;
+    height: 509px;
+    border: 2px black solid;
+
+  }
+  .card1ImgBox{
+    border-radius: 3px;
+    width: 250px;
+    height: 180px;
+}
+  .marginLeft{margin-left: 45px; }
+ 
+.topArtContainer{
+  width: 300px;
+  height: 250px;
+} 
+.topArtImgBox{
+  margin-right: 10px;
+  border-radius: 3px;
+  width: 300px;
+  height: 180px;
+}
+.topArtImgBox2{
+  margin-right: 10px;
+  border-radius: 3px;
+  width: 80px;
+  height: 80px;
+}
+.top1ArtTitle{
+  font-weight: 600;
+   margin-right: 10px;
+  border-radius: 3px;
+  width: 218px;
+  height: 70px;}
+.topArtTitle{
+  font-weight: 600;
+  margin-right: 10px;
+  border-radius: 3px;
+  width: 130px;
+  height: 80px;
+}
+.topArtIndex{
+  font-size: 35px;
+  color: #e4e1e1;
+  margin-right: 10px;
+  border-radius: 3px;
+  width: 60px;
+  height: 70px;
+}
+.loadMore {
+  margin: 5px 20px 9px;
+  border: none;
+  /* background: #1e5f1e; */
+  border-radius: 4px;
+  height: 20px;
+  padding: 3px;
+  color: burlywood;
+}
+.readJustifyCenter{
+ justify-content: center;
+}
+.readArtImg{
+  margin: 20px;
+  border-radius:12px ;
+  width: 310px;
+  height: 200px;
+}
+.ReadArtBox{
+  width: 350px;
+}
+.txtAlignCenter {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+  color: gray;
+}
+
+
+.borderShadow {
+    border: 2px solid rgb(223, 219, 219,.5);
+    margin-top: 30px;
+    padding: 5px;
+    
+}.jstSpaceBeetben{
+  justify-content: space-between;
+}
+.fa-facebook-square:before {
+  content: "\f082";
+  margin-left: 30px;
+}
+.fab:before{
+  cursor: pointer;
+}
+.ClapFixed {
+  position: absolute;
+  left: 64px;
+  top: 355px;
+}
+
+@media only screen and (max-width: 620px) {
+  
+
+.FeatureArtBox {
+  width: 100%;
+}
+.FeatureBox1 {
+height: 250px;
+  width:100%;
+}
+.FeatureImgBox1{
+    height: 250px;
+    width:100%;
+}
+.FeatureBox2 {
+  color: burlywood;
+ display: none;
+     
+}
+.FlexRow{
+  display: flex;
+ 
+}
+
+.cardContain{
+  width: 200px;
+}
+.cardTitle {
+  margin-left: 37px;
+  text-align: center;
+  font-size: 17px;
+}
+.cardDec {
+  text-align: center;
+  width: 335px;
+}
+.cardDate {
+  /* text-align: center; */
+  width: 335px;
+}
+.Advertistement{
+display: none;
+
+}
+.topArtContainer{
+  width: 320px;
+ height: 0%;
+} 
+.cardImgBox {
+  margin-right: 10px;
+  border-radius: 25px;
+  width: 323px;
+  height: 158px;
+}
+.ClapFixed {
+  display: none;
+}
+
+.artVerticleImg {
+  width: 353px;
+  height: 350px;
+}
+.headLinkFlex {
+  font-size: 13px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.FlexRow {
+  display: flex;
+  flex-direction: column;
+}
+.loadMore {
+width: 100px;
+height: 40px;
+}
+.headLinkText {
+  font-size: 10px;
+  
+}
+.marginLeft{margin: 0px; }
+
+.ArtFlxCol {
+  width: 355px;
+}
+.topArtTitle {
+  font-weight: 600;
+  margin-right: 10px;
+  border-radius: 3px;
+  width: 120px;
+  height: 80px;
+}
+}
