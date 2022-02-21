@@ -8,7 +8,7 @@ function Hollywood() {
   const [data,setData] = useState([])
 
   useEffect(()=>{
-      axios.get("https://aditykumar-blog-backend.herokuapp.com/api/v1/blogData/details")
+      axios.get("https://aditykumar-blog-backend.herokuapp.com/api/v1/blogData/details/hollyWood")
       .then((value)=>setData(value.data))
       .catch(err => {console.log(err)})
 
