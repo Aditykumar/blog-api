@@ -4,30 +4,16 @@ import { Link } from 'react-router-dom'
 import TopArtWebsite from '../TopArtWebsite'
 
 function Technology() {
-  const content = []
-  const [data,setData] = useState([])
+  const [content,setContent] = useState([])
+  
 
     useEffect(()=>{
         axios.get("https://aditykumar-blog-backend.herokuapp.com/api/v1/blogData/details/technology")
-        .then((value)=>setData(value.data))
+        .then((value)=>setContent(value.data))
         .catch(err => {console.log(err)})
 
     },[])
 
-
-  data.forEach((cat) => {
-    if (cat.Category === "technology") {
-      content.push({
-        id: cat.Id,
-        name: cat.Name,
-        img: cat.Img,
-        detail: cat.Details,
-        about: cat.About,
-        date: cat.Date,
-        category:cat.Category
-      });
-    }
-  });
 
 
 
@@ -41,7 +27,7 @@ function Technology() {
             <div>
               <div className='cardTitle'>{row.name}</div>
               <div className='cardDec cardContain'>
-                <div>{row.detail}</div>
+                <div>{row.details}</div>
 
 
               </div>

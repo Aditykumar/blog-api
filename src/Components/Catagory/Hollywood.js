@@ -4,32 +4,15 @@ import { Link } from 'react-router-dom'
 import TopArtWebsite from '../TopArtWebsite'
 
 function Hollywood() {
-  const content = []
-  const [data,setData] = useState([])
+  const [content,setContent] = useState([])
 
   useEffect(()=>{
-      axios.get("https://aditykumar-blog-backend.herokuapp.com/api/v1/blogData/details/hollyWood")
-      .then((value)=>setData(value.data))
+      axios.get("https://aditykumar-blog-backend.herokuapp.com/api/v1/blogData/details/hollywood")
+      .then((value)=>setContent(value.data))
       .catch(err => {console.log(err)})
 
   },[])
 
-
-  data.forEach((cat) => {
-    if (cat.Category === "hollyWood") {
-      content.push({
-        id: cat.Id,
-        name: cat.Name,
-        img: cat.Img,
-        detail: cat.Details,
-        about: cat.About,
-        date: cat.Date,
-        category:cat.Category
-
-
-      });
-    }
-  });
 
 
 
@@ -43,7 +26,7 @@ function Hollywood() {
             <div>
               <div className='cardTitle'>{row.name}</div>
               <div className='cardDec cardContain'>
-                <div>{row.detail}</div>
+                <div>{row.details}</div>
 
               </div>
               <p className='cardDate'>{row.category}<span className='cardDec'> / {row.date}</span></p>

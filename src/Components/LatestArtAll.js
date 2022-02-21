@@ -1,37 +1,19 @@
 import React, {  useEffect,useState  } from 'react'
 import { Link } from 'react-router-dom'
-import axios from 'axios'
 
-function LatestArtAll() {
-    const latest = []
+function LatestArtAll(props) {
     const [data,setData] = useState([])
     useEffect(()=>{
-        axios.get("https://aditykumar-blog-backend.herokuapp.com/api/v1/blogData/details")
-        .then((value)=>setData(value.data))
-        .catch(err => {console.log(err)})
+    
+setData(props.dataObject[0])
 
-    },[])
-    data.forEach((a, index) => {
-        if (index >= data.length - 3) {
-            latest.push(
-                {
-                    name: a.Name,
-                    img: a.Img,
-                    id: a.Id,
-                    date: a.Date,
-                    detail: a.Details,
-                    category: a.Category
-
-                }
-            )
-        }
-
-    })
+     },[props.dataObject])
+   
     return (
         <div style={{width:"auto"}}>
             <div className='FlexRow'>
                 {
-                    latest.map((latest) =>
+                    data.map((latest) =>
                         <div key={latest.id}>
                             <div className='cardImgBox' style={{ cursor: "pointer" }} > <Link to={`/artReading/${latest.id}`}><img className='cardImgBox' src={latest.img} alt="" /> </Link></div>
 

@@ -1,51 +1,20 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios'
 import {Link} from 'react-router-dom'
-function LatestArtCat1() {
-    const bolly3 = []
-    const bollyAll = []
+function LatestArtCat1(props) {
+  
     const [visible, SetVisible] = useState(false)
     const [data,setData] = useState([])
     useEffect(()=>{
-        axios.get("https://aditykumar-blog-backend.herokuapp.com/api/v1/blogData/details")
-        .then((value)=>setData(value.data))
-        .catch(err => {console.log(err)})
+    
+setData(props.dataObject[0])
 
-    },[])
-    data.forEach((a) => {
-        if (a.Category === "bollywood") {
-            bollyAll.push({
-                name: a.Name,
-                img: a.Img,
-                id:a.Id,
-                date:a.Date,
-                detail:a.Details,
-                category:a.Category
-
-            })
-        }
-
-    })
-    bollyAll.forEach((a, index) => {
-        if (index < 4) {
-            bolly3.push({
-                name: a.name,
-                img: a.img,
-                id:a.id,
-                date:a.date,
-                detail:a.detail,
-                category:a.category
-
-            })
-        }
-
-    })
-
+     },[props.dataObject])
+console.log("#art1#",data);
 
    
     return (
         <div>
-                {visible ? <>{bollyAll.map((raa) => 
+                {visible ? <>{data.map((raa) => 
                             <div  key={raa.id} className='FlexRow'>
                                 <div  style={{cursor:"pointer"}}><Link to={`/artReading/${raa.id}`}> <img className='cardImgBox' src={raa.img}alt=""/></Link> </div>
                                 <div>
@@ -56,7 +25,7 @@ function LatestArtCat1() {
                            </div>
                         ) }
                       <button  style={{cursor:"pointer"}} className='loadMore' onClick={()=>{ SetVisible(false)}} >&#8593; Load Less </button> </>
-                    :<>{bolly3.map((ra)=> 
+                    :<>{data.filter((value,index)=>index<4).map((ra)=> 
                         <div key={ra.id}  className='FlexRow' >
                             <div  style={{cursor:"pointer"}}> <Link to={`/artReading/${ra.id}`}> <img className='cardImgBox' src={ra.img}alt=""/></Link> </div>
                             <div>

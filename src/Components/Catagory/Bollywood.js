@@ -4,32 +4,17 @@ import { Link } from 'react-router-dom'
 import TopArtWebsite from '../TopArtWebsite'
 
 function Bollywood() {
-  const content = []
-  const [data,setData] = useState([])
+  const [content,setContent] = useState([])
 
     useEffect(()=>{
         axios.get("https://aditykumar-blog-backend.herokuapp.com/api/v1/blogData/details/bollywood")
-        .then((value)=>setData(value.data))
+        .then((value)=>setContent(value.data))
         .catch(err => {console.log(err)})
 
     },[])
 
 
-  data.forEach((cat) => {
-    if (cat.Category === "bollywood") {
-     
-      content.push({
-        id: cat.Id,
-        name: cat.Name,
-        img: cat.Img,
-        detail: cat.Details,
-        about: cat.About,
-        date: cat.Date,
-        category: cat.Category
-      });
-    }
-  });
-
+  
 
 
 
@@ -43,7 +28,7 @@ function Bollywood() {
             <div>
               <div className='cardTitle'>{row.name}</div>
               <div className='cardDec cardContain'>
-                <div>{row.detail}</div>
+                <div>{row.details}</div>
 
               </div>
               <p className='cardDate'>{row.category}<span className='cardDec'> / {row.date}</span></p>

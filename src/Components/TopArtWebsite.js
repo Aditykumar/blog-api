@@ -3,74 +3,23 @@ import axios from 'axios'
 
 import { Link } from 'react-router-dom'
 
-function TopArtWebsite() {
-    let top1 = []
-    let top3 = []
+function TopArtWebsite(props) {
+   
     const [data,setData] = useState([])
-
     useEffect(()=>{
-        axios.get("https://aditykumar-blog-backend.herokuapp.com/api/v1/blogData/details")
+        axios.get("https://aditykumar-blog-backend.herokuapp.com/api/v1/blogData/details/top")
         .then((value)=>setData(value.data))
         .catch(err => {console.log(err)})
 
     },[])
-    data.forEach((a) => {
-        let key = a.Id
-        switch (key) {
-            case "21":
-                top1.push({
-                    name: a.Name,
-                    img: a.Img,
-                    id: a.Id,
-                    date: a.Date,
-                    detail: a.Details,
-                    category: a.category
-                })
-                break;
-            case "11":
-                top3.push({
-                    name: a.Name,
-                    img: a.Img,
-                    id: a.Id,
-                    date: a.Date,
-                    detail: a.Details,
-                    category: a.Category
-                })
-                break;
-            case "22":
-                top3.push({
-                    name: a.Name,
-                    img: a.Img,
-                    id: a.Id,
-                    date: a.Date,
-                    detail: a.Details,
-                    category: a.Category
-                })
-                break;
-            case "40":
-                top3.push({
-                    name: a.Name,
-                    img: a.Img,
-                    id: a.Id,
-                    date: a.Date,
-                    detail: a.Details,
-                    category: a.Category
-                })
-                break;
 
-
-            default:
-                break;
-        }
-
-    })
-  
+      
 
 
     return (
         <div>
             <div className='FlexRow  topArtContainer'>
-                {top1.map((ra, index) =>
+                {data.filter((value,index)=>index<1).map((ra, index) =>
                     <div key={ra.id}>
                         <div style={{ cursor: "pointer" }}><Link to={`/artReading/${ra.id}`}> <img className='topArtImgBox' src={ra.img} alt="top" /></Link></div>
 
@@ -83,7 +32,7 @@ function TopArtWebsite() {
                         </div>
                     </div>
                 )}
-                {top3.map((raa, index) =>
+                {data.filter((value,index)=>index>0).map((raa, index) =>
                     <div key={raa.id} className='FlexRow1'>
                         <div style={{ cursor: "pointer" }}><Link to={`/artReading/${raa.id}`}>  <img className='topArtImgBox2' src={raa.img} alt="{raa.name}" /></Link></div>
                         <div className='topArtTitle'>
