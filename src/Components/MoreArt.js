@@ -19,7 +19,7 @@ const catData=[]
         
     });
 data.forEach(a => {
-    if (cat[0]===a.category) {
+    if ((cat[0]===a.category)&& (a.id !== id)) {
         catData.push(
                 {name: a.name,
                 img: a.img,
