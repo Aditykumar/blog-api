@@ -2,6 +2,12 @@ body{
   margin: 6px;
   padding: 6px;
 }
+.loading{
+margin-left: 550px;
+margin-top: 150px;
+width: 180px;
+height: 150px;
+}
 .FlexRow{
   flex-wrap: wrap;
   display: flex;

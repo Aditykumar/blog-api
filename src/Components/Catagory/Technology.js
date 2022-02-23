@@ -19,7 +19,8 @@ function Technology() {
 
 
   return (
-    <div className='FlexRow1'>
+    <>{
+      content[1] ? <div className='FlexRow1'>
       <div>
         {content.map((row) =>
           <div key={row.id} className='FlexRow' >
@@ -43,6 +44,10 @@ function Technology() {
         <TopArtWebsite />
       </div>
     </div>
+        :
+        <img className='loading' alt="Loading" src='https://img.search.brave.com/nL_PdLUf5zuqh-PEW0MHK_vcWSwh7BqqKENqm9qDEI4/rs:fit:512:384:1/g:ce/aHR0cHM6Ly9tZWRp/YS5naXBoeS5jb20v/bWVkaWEvdzdqdFZu/WHhNT3EwOC9naXBo/eS5naWY.gif' />
+    }
+    </>
   )
 }
 
